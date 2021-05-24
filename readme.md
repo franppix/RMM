@@ -1,87 +1,64 @@
-# Spring PetClinic Sample Application [![Build Status](https://travis-ci.org/spring-projects/spring-petclinic.png?branch=main)](https://travis-ci.org/spring-projects/spring-petclinic/)
+# REST API for Monitor and Manage Devices 
 
-## Understanding the Spring Petclinic application with a few diagrams
-<a href="https://speakerdeck.com/michaelisvy/spring-petclinic-sample-application">See the presentation here</a>
-
-## Running petclinic locally
-Petclinic is a [Spring Boot](https://spring.io/guides/gs/spring-boot) application built using [Maven](https://spring.io/guides/gs/maven/). You can build a jar file and run it from the command line:
-
-
-```
-git clone https://github.com/spring-projects/spring-petclinic.git
-cd spring-petclinic
-./mvnw package
-java -jar target/*.jar
-```
-
-You can then access petclinic here: http://localhost:8080/
-
-<img width="1042" alt="petclinic-screenshot" src="https://cloud.githubusercontent.com/assets/838318/19727082/2aee6d6c-9b8e-11e6-81fe-e889a5ddfded.png">
-
-Or you can run it from Maven directly using the Spring Boot Maven plugin. If you do this it will pick up changes that you make in the project immediately (changes to Java source files require a compile as well - most people use an IDE for this):
-
-```
-./mvnw spring-boot:run
-```
-
-> NOTE: Windows users should set `git config core.autocrlf true` to avoid format assertions failing the build (use `--global` to set that flag globally).
-
-## In case you find a bug/suggested improvement for Spring Petclinic
-Our issue tracker is available here: https://github.com/spring-projects/spring-petclinic/issues
+REST API create with spring boot and java, with maven repository, the API use MySQL Database
 
 
 ## Database configuration
 
-In its default configuration, Petclinic uses an in-memory database (H2) which
-gets populated at startup with data. The h2 console is automatically exposed at `http://localhost:8080/h2-console`
-and it is possible to inspect the content of the database using the `jdbc:h2:mem:testdb` url.
- 
-A similar setup is provided for MySql in case a persistent database configuration is needed. Note that whenever the database type is changed, the app needs to be run with a different profile: `spring.profiles.active=mysql` for MySql.
+Once installed MySQL Database, execute the next scripts, for create Database, Tables and populate with some information:
+ * SQL/CreateDB.sql
+ * SQL/customer.sql
+ * SQL/service.sql
+ * SQL/service_cost.sql
+ * SQL/device.sql
+ * SQL/customer_service.sql
 
-You could start MySql locally with whatever installer works for your OS, or with docker:
+Subsequently, the following user "rmm" must be created with password "rmm123", in case of wanting to use another user, modification must be made in the persistance.xml file.
 
-```
-docker run -e MYSQL_USER=petclinic -e MYSQL_PASSWORD=petclinic -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=petclinic -p 3306:3306 mysql:5.7.8
-```
 
-Further documentation is provided [here](https://github.com/spring-projects/spring-petclinic/blob/main/src/main/resources/db/mysql/petclinic_db_setup_mysql.txt).
+<img width="800" alt="DB-RMM" src="https://github.com/franppix/RMM/blob/master/installImg/DB.PNG">
 
-## Working with Petclinic in your IDE
+
+## Compile in your IDE
 
 ### Prerequisites
 The following items should be installed in your system:
-* Java 8 or newer (full JDK not a JRE).
+* Java 8 (full JDK not a JRE).
 * git command line tool (https://help.github.com/articles/set-up-git)
-* Your preferred IDE 
-  * Eclipse with the m2e plugin. Note: when m2e is available, there is an m2 icon in `Help -> About` dialog. If m2e is
-  not there, just follow the install process here: https://www.eclipse.org/m2e/
-  * [Spring Tools Suite](https://spring.io/tools) (STS)
-  * IntelliJ IDEA
-  * [VS Code](https://code.visualstudio.com)
+* Eclise IDE 
+  * Install pluggin Spring Tools 4
+<img width="800" alt="ES-RMM" src="https://github.com/franppix/RMM/blob/master/installImg/SpringOnEclipse.PNG">
+
 
 ### Steps:
 
 1) On the command line
     ```
-    git clone https://github.com/spring-projects/spring-petclinic.git
+    git clone https://github.com/franppix/RMM.git
     ```
 2) Inside Eclipse or STS
     ```
     File -> Import -> Maven -> Existing Maven project
     ```
 
-    Then either build on the command line `./mvnw generate-resources` or using the Eclipse launcher (right click on project and `Run As -> Maven install`) to generate the css. Run the application main method by right clicking on it and choosing `Run As -> Java Application`.
+<img width="400" alt="ES-RMM" src="https://github.com/franppix/RMM/blob/master/installImg/ImportMavenPrj.PNG">
 
-3) Inside IntelliJ IDEA
-    In the main menu, choose `File -> Open` and select the Petclinic [pom.xml](pom.xml). Click on the `Open` button.
 
-    CSS files are generated from the Maven build. You can either build them on the command line `./mvnw generate-resources` or right click on the `spring-petclinic` project then `Maven -> Generates sources and Update Folders`.
+3) Clean the project with Maven
+    ```
+    Over the project rmm-services-server-app  Right click -> Run AS -> Maven Clean
+    ```
+    
+5)   Clean/Build the project
+    ```
+   Project -> Clean -> Maven Clean
+    ```
+    If you dont have activate the Build Automatically option, then you need to choose the option Buil Project
 
-    A run configuration named `PetClinicApplication` should have been created for you if you're using a recent Ultimate version. Otherwise, run the application by right clicking on the `PetClinicApplication` main class and choosing `Run 'PetClinicApplication'`.
-
-4) Navigate to Petclinic
-
-    Visit [http://localhost:8080](http://localhost:8080) in your browser.
+5)   Install with Maven
+     ```
+     Over the project rmm-services-server-app  Right click -> Run AS -> Maven Install
+     ```
 
 
 ## Looking for something in particular?
