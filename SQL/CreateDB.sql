@@ -1,6 +1,7 @@
 CREATE DATABASE `rmm_services` /*!40100 DEFAULT CHARACTER SET utf8 */;
 
---CREATE TABLES
+use `rmm_services`;
+
 CREATE TABLE `customer` (
   `id_number` varchar(255) NOT NULL,
   `address` varchar(255) DEFAULT NULL,
