@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "495d6bb2-8407-4108-9028-79c87c9a1da8",
+		"name": "RMM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "userSecurity",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"device\" : {\r\n        \"id\": \"D474\",\r\n        \"systemName\": \"Local Machine\",\r\n        \"type\": \"MAC\",\r\n        \"dateCreate\": \"2021-05-23\"\r\n    },\r\n    \"idNumber\":\"H126\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/user?user=prueba&password=prueba",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "user",
+							"value": "prueba"
+						},
+						{
+							"key": "password",
+							"value": "prueba"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetDevice",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RMM eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoidXNlcm5hbWUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIxODc5NjgwLCJleHAiOjE2MjE4ODAyODB9.o1QMBNIsa88RBasT-yqVGhe_H0vL1n6DDjY5IE7PLf6vdgxlONui-zCPdJX6Ckz6wgrjiJFEobJkANgNQ1iFtA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/device/F126",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"device",
+						"F126"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddDevice",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RMM eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoidXNlcm5hbWUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIxODc5NjgwLCJleHAiOjE2MjE4ODAyODB9.o1QMBNIsa88RBasT-yqVGhe_H0vL1n6DDjY5IE7PLf6vdgxlONui-zCPdJX6Ckz6wgrjiJFEobJkANgNQ1iFtA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"device\" : {\r\n        \"id\": \"D474\",\r\n        \"systemName\": \"Local Machine\",\r\n        \"type\": \"MAC\",\r\n        \"dateCreate\": \"2021-05-23\"\r\n    },\r\n    \"idNumber\":\"H126\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/device",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"device"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateDevice",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RMM eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoidXNlcm5hbWUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIxODc5NjgwLCJleHAiOjE2MjE4ODAyODB9.o1QMBNIsa88RBasT-yqVGhe_H0vL1n6DDjY5IE7PLf6vdgxlONui-zCPdJX6Ckz6wgrjiJFEobJkANgNQ1iFtA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"device\": {\r\n        \"id\": \"D474\",\r\n        \"systemName\": \"Local Machine Mod\",\r\n        \"type\": \"MAC\",\r\n        \"dateCreate\": \"2021-05-23\"\r\n    },\r\n    \"idNumber\":\"H126\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/device/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"device",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteDevice",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RMM eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoidXNlcm5hbWUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIxODc5NjgwLCJleHAiOjE2MjE4ODAyODB9.o1QMBNIsa88RBasT-yqVGhe_H0vL1n6DDjY5IE7PLf6vdgxlONui-zCPdJX6Ckz6wgrjiJFEobJkANgNQ1iFtA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/device/D474",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"device",
+						"D474"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetBill",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RMM eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoidXNlcm5hbWUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIxODc5NjgwLCJleHAiOjE2MjE4ODAyODB9.o1QMBNIsa88RBasT-yqVGhe_H0vL1n6DDjY5IE7PLf6vdgxlONui-zCPdJX6Ckz6wgrjiJFEobJkANgNQ1iFtA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/monthlyBill/F126",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"monthlyBill",
+						"F126"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetService",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RMM eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoidXNlcm5hbWUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIxODc5NjgwLCJleHAiOjE2MjE4ODAyODB9.o1QMBNIsa88RBasT-yqVGhe_H0vL1n6DDjY5IE7PLf6vdgxlONui-zCPdJX6Ckz6wgrjiJFEobJkANgNQ1iFtA",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/service/F126",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"service",
+						"F126"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddService",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RMM eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoidXNlcm5hbWUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIxODc5NjgwLCJleHAiOjE2MjE4ODAyODB9.o1QMBNIsa88RBasT-yqVGhe_H0vL1n6DDjY5IE7PLf6vdgxlONui-zCPdJX6Ckz6wgrjiJFEobJkANgNQ1iFtA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"service\" : {\r\n        \"serviceId\": \"CLO\",\r\n        \"serviceName\": \"Local Machine\",\r\n        \"dateCreate\": \"2021-05-23\"\r\n    },\r\n    \"idNumber\":\"H126\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/service",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteService",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "RMM eyJhbGciOiJIUzUxMiJ9.eyJqdGkiOiJzb2Z0dGVrSldUIiwic3ViIjoidXNlcm5hbWUiLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwiaWF0IjoxNjIxODc5NjgwLCJleHAiOjE2MjE4ODAyODB9.o1QMBNIsa88RBasT-yqVGhe_H0vL1n6DDjY5IE7PLf6vdgxlONui-zCPdJX6Ckz6wgrjiJFEobJkANgNQ1iFtA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/service/56",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"service",
+						"56"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
