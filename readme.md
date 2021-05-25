@@ -65,9 +65,11 @@ The following items should be installed in your system:
 ## Coverage Test
 
 CORE
+
 <img width="800" alt="ES-RMM" src="https://github.com/franppix/RMM/blob/master/installImg/CoverageCore.PNG">
 
 SERVIES
+
 <img width="800" alt="ES-RMM" src="https://github.com/franppix/RMM/blob/master/installImg/ServiceCoverage.PNG">
 
 ## How to use the API?
