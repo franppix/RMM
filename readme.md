@@ -24,6 +24,7 @@ Subsequently, the following user "rmm" must be created with password "rmm123", i
 ### Prerequisites
 The following items should be installed in your system:
 * Java 8 (full JDK not a JRE).
+* MySQL 10.5
 * git command line tool (https://help.github.com/articles/set-up-git)
 * Eclise IDE 
   * Install pluggin Spring Tools 4
