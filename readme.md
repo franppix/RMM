@@ -59,11 +59,22 @@ The following items should be installed in your system:
      ```
      Over the project rmm-services-server-app  Right click -> Run AS -> Maven Install
      ```
+5)   Start spring server
+<img width="800" alt="ES-RMM" src="https://github.com/franppix/RMM/blob/master/installImg/Server.PNG">
 
 
 ## How to use the API?
 
 The services can be found in the EndPoint folder, the file was generated from Postman
 
+<img width="400" alt="ES-RMM" src="https://github.com/franppix/RMM/blob/master/installImg/EndPoints.PNG">
+
+First invoke the rest service userSecurity, send a user and password, the service return a token, this token is needed in the other services.
+
+<img width="1200" alt="ES-RMM" src="https://github.com/franppix/RMM/blob/master/installImg/UserSecurity.PNG">
+
+For the rest of the service, in the header needs to send a token
+
+<img width="1200" alt="ES-RMM" src="https://github.com/franppix/RMM/blob/master/installImg/ConfigAutori.PNG">
 
 
